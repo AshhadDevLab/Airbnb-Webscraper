@@ -6,7 +6,6 @@ This is a web scraping tool for extracting data from Airbnb. It is built using S
 
 ![Airbnb Scraper](./images/airbnb_scrapper_logo.jpg)
 
-
 ### Features
 
 - Search for Airbnb listings based on location and other search filters
@@ -17,26 +16,29 @@ This is a web scraping tool for extracting data from Airbnb. It is built using S
 ## Installation
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-username/your-repo.git
-    ```
+
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   ```
 
 2. Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 
 1. Navigate to the project directory:
-    ```bash
-    cd {current_dir}
-    ```
+
+   ```bash
+   cd {current_dir}
+   ```
 
 2. Run the Streamlit app:
-    ```bash
-    streamlit run main.py
-    ```
+
+   ```bash
+   streamlit run main.py
+   ```
 
 3. Use the web interface to enter the search parameters and click on the "Scrape Data" button.
 
