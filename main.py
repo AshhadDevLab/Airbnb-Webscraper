@@ -24,11 +24,13 @@ st.write(
     "This is an example web scraper for Airbnb made using Streamlit. Please note that this is not a complete model, but rather a demonstration of how web scraping can be done with Streamlit."
 )
 
-st.image("./images/airbnb_scrapper_logo.jpg", caption=None, use_column_width=True)
+st.image("./images/airbnb_scrapper_logo.jpg",
+         caption=None,
+         use_column_width=True)
 
-location_radio = st.radio(
-    "Search Type:", ["Search by location", "Search by region"], horizontal=True
-)
+location_radio = st.radio("Search Type:",
+                          ["Search by location", "Search by region"],
+                          horizontal=True)
 
 if location_radio == "Search by location":
     location = st.text_input("Enter the location", "New York, United States")
@@ -59,26 +61,33 @@ with datecol2:
 countcol1, countcol2, countcol3, countcol4 = st.columns([1, 1, 1, 1])
 
 with countcol1:
-    adults_count = st.number_input(
-        "Number of adults", value=0, key="adults_count", step=1
-    )
+    adults_count = st.number_input("Number of adults",
+                                   value=0,
+                                   key="adults_count",
+                                   step=1)
 with countcol2:
-    children_count = st.number_input(
-        "Number of children", value=0, key="children_count", step=1
-    )
+    children_count = st.number_input("Number of children",
+                                     value=0,
+                                     key="children_count",
+                                     step=1)
 with countcol3:
-    infants_count = st.number_input(
-        "Number of infants", value=0, key="infant_count", step=1
-    )
+    infants_count = st.number_input("Number of infants",
+                                    value=0,
+                                    key="infant_count",
+                                    step=1)
 with countcol4:
-    pets_count = st.number_input("Number of pets", value=0, key="pets_count", step=1)
+    pets_count = st.number_input("Number of pets",
+                                 value=0,
+                                 key="pets_count",
+                                 step=1)
 
 output = st.radio("Output:", ["Markdown", "CSV", "Excel"], horizontal=True)
 
 additional_search_filters = st.toggle("Additional Search Filters", value=False)
 
 if additional_search_filters:
-    stay_radio = st.radio("Stay for a:", ["Weekend", "Week", "Month"], horizontal=True)
+    stay_radio = st.radio("Stay for a:", ["Weekend", "Week", "Month"],
+                          horizontal=True)
     if stay_radio == "Weekend":
         stay = "weekend_trip"
     elif stay_radio == "Week":
@@ -90,12 +99,17 @@ if additional_search_filters:
     pricecol1, pricecol2 = st.columns([1, 1])
 
     with pricecol1:
-        min_price = st.number_input("Minimum Price", value=10, key="min_price", step=1)
+        min_price = st.number_input("Minimum Price",
+                                    value=10,
+                                    key="min_price",
+                                    step=1)
         st.write(f"Minimum Price {min_price} USD")
     with pricecol2:
-        max_price = st.number_input("Maximum Price", value=450, key="max_price", step=1)
+        max_price = st.number_input("Maximum Price",
+                                    value=450,
+                                    key="max_price",
+                                    step=1)
         st.write(f"Maximum Price {max_price} USD")
-
 
 if st.button("Scrape Data"):
     driver = webdriver.Chrome()
@@ -114,16 +128,15 @@ if st.button("Scrape Data"):
     )
     prices = driver.find_elements(By.CSS_SELECTOR, "span._tyxjp1")
     ratings = driver.find_elements(
-        By.CSS_SELECTOR, "span.r1dxllyb.atm_7l_18pqv07.atm_cp_1ts48j8.dir.dir-ltr"
-    )
+        By.CSS_SELECTOR,
+        "span.r1dxllyb.atm_7l_18pqv07.atm_cp_1ts48j8.dir.dir-ltr")
     links = driver.find_elements(
         By.CSS_SELECTOR,
         "a.l1ovpqvx.atm_1y33qqm_1ggndnn_10saat9.atm_17zvjtw_zk357r_10saat9.atm_w3cb4q_il40rs_10saat9.atm_1cumors_fps5y7_10saat9.atm_52zhnh_1s82m0i_10saat9.atm_jiyzzr_1d07xhn_10saat9.bn2bl2p.atm_5j_8todto.atm_9s_1ulexfb.atm_e2_1osqo2v.atm_fq_idpfg4.atm_mk_stnw88.atm_tk_idpfg4.atm_vy_1osqo2v.atm_26_1j28jx2.atm_3f_glywfm.atm_kd_glywfm.atm_3f_glywfm_jo46a5.atm_l8_idpfg4_jo46a5.atm_gi_idpfg4_jo46a5.atm_3f_glywfm_1icshfk.atm_kd_glywfm_19774hq.atm_uc_x37zl0_1w3cfyq_oggzyc.atm_70_thabx4_1w3cfyq_oggzyc.atm_uc_glywfm_1w3cfyq_pynvjw.atm_uc_x37zl0_18zk5v0_oggzyc.atm_70_thabx4_18zk5v0_oggzyc.atm_uc_glywfm_18zk5v0_pynvjw.dir.dir-ltr",
     )
 
-    for title, subtitle, price, rating, link in zip(
-        titles, subtitles, prices, ratings, links
-    ):
+    for title, subtitle, price, rating, link in zip(titles, subtitles, prices,
+                                                    ratings, links):
         if output == "Markdown":
             data["Title"].append(title.text)
             data["Subtitle"].append(subtitle.text)
