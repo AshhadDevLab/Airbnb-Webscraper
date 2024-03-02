@@ -1,8 +1,9 @@
+import csv
+
+import pandas as pd
 import streamlit as st
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import csv
-import pandas as pd
 
 comma = "'"
 data = {"Title": [], "Subtitle": [], "Price": [], "Rating": [], "Link": []}
