@@ -4,8 +4,9 @@
 
 This is a web scraping tool for extracting data from Airbnb. It is built using Streamlit and Selenium.
 
-![Airbnb Scraper](./images/airbnb_scrapper_logo.jpg)
-
+<p align="center">
+    <img src="./images/airbnb_scrapper_logo.jpg" />
+</p>
 
 ### Features
 
@@ -17,26 +18,29 @@ This is a web scraping tool for extracting data from Airbnb. It is built using S
 ## Installation
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-username/your-repo.git
-    ```
+
+   ```bash
+   git clone https://github.com/AshhadDevLab/Airbnb-Webscraper.git
+   ```
 
 2. Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 
 1. Navigate to the project directory:
-    ```bash
-    cd {current_dir}
-    ```
+
+   ```bash
+   cd Airbnb-Webscraper
+   ```
 
 2. Run the Streamlit app:
-    ```bash
-    streamlit run main.py
-    ```
+
+   ```bash
+   streamlit run main.py
+   ```
 
 3. Use the web interface to enter the search parameters and click on the "Scrape Data" button.
 
@@ -44,17 +48,12 @@ This is a web scraping tool for extracting data from Airbnb. It is built using S
 
 5. If you choose CSV or Excel as the output format, the data will also be saved in the project directory.
 
-## Screenshots
-
-![Screenshot 1](./images/screenshot1.png)
-![Screenshot 2](./images/screenshot2.png)
-
 ## License
 
 This project is licensed under the BSD-3 License. See the [LICENSE](./LICENSE) file for more details.
 
 ## Contact
 
-- GitHub: [Your GitHub Username](https://github.com/your-username)
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile)
-- Email: your-email@example.com
+- GitHub: [AshhadDevLab](https://github.com/AshhadDevLab)
+- LinkedIn: [Ashhad Ahmed](https://www.linkedin.com/in/ashhad-ahmed-1230ab25a/)
+- Email: ashhadahmed776@gmail.com
