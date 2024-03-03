@@ -48,6 +48,16 @@ This is a web scraping tool for extracting data from Airbnb. It is built using S
 
 5. If you choose CSV or Excel as the output format, the data will also be saved in the project directory.
 
+## Screenshots
+
+<p align="center">
+    <img src="./images/Screenshot_1.jpg" />
+</p>
+
+<p align="center">
+    <img src="./images/Screenshot_2.jpg" />
+</p>
+
 ## License
 
 This project is licensed under the BSD-3 License. See the [LICENSE](./LICENSE) file for more details.
